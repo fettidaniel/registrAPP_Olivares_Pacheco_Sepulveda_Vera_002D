@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="warning">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="warning">RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <div class="nombre">
+    <h3> Bienvenid@: {{ nombre }} </h3>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <ion-img src="assets/logo.png" class="img"></ion-img>
+  <br>
+  <br>
+
+  <ion-list>
+    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirecTo" detail="true">
+      <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+      {{ c.name }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+

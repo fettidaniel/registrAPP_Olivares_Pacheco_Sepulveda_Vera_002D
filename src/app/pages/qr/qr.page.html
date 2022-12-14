@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Regresar" color="warning" mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title color="warning">Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="scan()" color="warning" class="qr">Registrarse</ion-button>
+  {{code}}
+</ion-content>
